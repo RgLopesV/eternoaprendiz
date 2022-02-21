@@ -24,16 +24,16 @@ public class DummyData {
         List<Post> postList = new ArrayList<>();
 
         Post post1 = new Post();
-        post1.setAutor("Rogério Lopes vilela");
+        post1.setAutor("Rogério Lopes Vilela");
         post1.setTitulo("Olá Mundo!!!!!");
-        post1.setTexto("Existe uma antiga lenda que o DEV que não faz o olá mundo, nunca será um bom DEV, tudo tem um começo, e o olá mundo é a porta de entrada. Praise the SUN!!");
+        post1.setTexto("Existe uma antiga lenda que o DEV que não faz o olá mundo, nunca será um bom DEV, tudo tem um começo, e o olá mundo é a porta de entrada. <br>Praise the SUN!!");
         post1.setData(LocalDate.now());
 
         Post post2 = new Post();
-        post2.setAutor("Rogério Lopes vilela");
+        post2.setAutor("Rogério Lopes Vilela");
         post2.setTitulo("O eterno Aprendiz");
-        post2.setTexto("Após a leitura do livro Diario de um Mago do escritor Paolo Coelho, entendi que nada mais somos do que eternos aprendizes, sempre estamos a aprender algo nessa vida, feliz aquele que aprende, pois quem aprende muda. Praise the SUN!!");
-        post2.setData(LocalDate.now().plus(1L , ChronoUnit.DAYS));
+        post2.setTexto("Após a leitura do livro Diario de um Mago do escritor Paolo Coelho, entendi que nada mais somos do que eternos aprendizes, sempre estamos a aprender algo nessa vida, feliz aquele que aprende, pois quem aprende muda. <br>Praise the SUN!!");
+        post2.setData(LocalDate.now().plus(1l , ChronoUnit.DAYS));
 
         postList.add(post1);
         postList.add(post2);
