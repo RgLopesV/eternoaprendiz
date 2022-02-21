@@ -36,7 +36,8 @@
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="http://localhost:8080/posts">Posts</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Novo Post</li>
+                <li class="breadcrumb-item"><a th:href="${(#mvc.url('PC#getPostDetails').arg(0,post.id)).build()}">Detalhes do Post</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Atualizar Post</li>
             </ol>
             <br>
         </nav>
@@ -44,14 +45,14 @@
             <th:block th:include="mensagemValidacao"></th:block>
             <form method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="titulo" placeholder="Título *">
+                    <input type="text" class="form-control" name="titulo" placeholder="Título *" th:value="${post.titulo}">
                 </div>
                 <br>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="autor" placeholder="Autor *">
+                    <input type="text" class="form-control" name="autor" placeholder="Autor *" th:value="${post.autor}">
                 </div>
                 <br>
-                <textarea id="summernote" type="text" class="form-control" name="texto" placeholder="Texto *" rows="10"></textarea>
+                <textarea id="summernote" type="text" class="form-control" name="texto" placeholder="Texto *" rows="10"  th:text="${post.texto}"></textarea>
                 <small class="form-text text-muted">(*) Campos obrigatórios</small>
                 <br>
                 <br>
